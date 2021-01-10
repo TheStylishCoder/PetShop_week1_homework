@@ -71,6 +71,17 @@ def add_pet_to_customer(customer, new_pet):
 
 
 
-def customer_can_afford_pet(customer, new_pet):
-    if customer["cash"] >= new_pet["price"]:
-        return customer
+def customer_can_afford_pet(customers, new_pet):
+    pet_cost = new_pet["price"]
+    updated_cash = get_customer_cash(customers) - pet_cost
+    for customer in customers:
+        if updated_cash >= 0:
+            return True
+        else:
+            return False #This function is for all three customer_can_afford_pet_sufficient_funds, can_customer_afford_pet_insufficient_funds, can_customer_afford_pet_exact_funds tests.
+
+
+
+
+
+ 
