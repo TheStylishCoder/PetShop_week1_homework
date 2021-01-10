@@ -58,5 +58,19 @@ def get_customer_cash(customer):
     return customer["cash"]
 
 
-# def remove_customer_cash(customer, amount):
-#     customer["cash"] - amount
+def remove_customer_cash(customer, amount):
+    new_value = get_customer_cash(customer) - amount
+    customer["cash"] = new_value
+
+def get_customer_pet_count(customer):
+    return len(customer["pets"])
+
+
+def add_pet_to_customer(customer, new_pet):
+    customer["pets"].append(new_pet)
+
+
+
+def customer_can_afford_pet(customer, new_pet):
+    if customer["cash"] >= new_pet["price"]:
+        return customer
