@@ -82,6 +82,10 @@ def customer_can_afford_pet(customers, new_pet):
 
 
 
+   
+    
+    
+    
+    
+   
 
-
- 
